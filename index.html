@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Encryption-Decryption Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Advanced Encryption-Decryption Tool</h1>
+        
+        <div class="form-group">
+            <label for="method">Select Method:</label>
+            <select id="method">
+                <option value="caesar">Caesar Cipher</option>
+                <option value="base64">Base64 Encoding</option>
+                <option value="reverse">Reverse Text</option>
+                <option value="binary">Binary Encoding</option>
+                <option value="hex">Hexadecimal Encoding</option>
+            </select>
+        </div>
+        
+        <div class="method-info" id="methodInfo">
+            <h4>Method Information</h4>
+            <p id="methodDescription">Select an encryption method to see its description.</p>
+        </div>
+        
+        <div class="form-group shift-field" id="shiftField">
+            <label for="shift">Shift Value (1-25):</label>
+            <input type="number" id="shift" min="1" max="25" value="3">
+        </div>
+        
+
+        
+        <div class="form-group">
+            <label for="inputText">Input Text:</label>
+            <textarea id="inputText" placeholder="Enter the text you want to encrypt or decrypt..."></textarea>
+        </div>
+        
+        <div class="button-group">
+            <button class="encrypt-btn" onclick="encrypt()">🔒 Encrypt</button>
+            <button class="decrypt-btn" onclick="decrypt()">🔓 Decrypt</button>
+            <button class="clear-btn" onclick="clearAll()">🗑️ Clear All</button>
+        </div>
+        
+        <div class="output-section">
+            <label for="outputText">Result:</label>
+            <textarea id="outputText" placeholder="Encrypted or decrypted text will appear here..." readonly></textarea>
+        </div>
+        
+        <div class="keyboard-shortcuts">
+            <h4>Keyboard Shortcuts</h4>
+            <ul>
+                <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> - Encrypt</li>
+                <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> - Decrypt</li>
+                <li><kbd>Escape</kbd> - Clear All</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
